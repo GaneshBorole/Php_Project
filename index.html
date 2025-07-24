@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Travel form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Travel form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img class="bg" src="bg.jpg" alt="IIT Kanpur">
-    <div class="container">
+  <img class="bg" src="bg.jpg" alt="IIT Kanpur">
+  <div class="container">
     <h1>Welcome to IIT Kanpur Trip form</h1>
-    <p>Enter your deatails and submit this form to confirm your participation in trip
-    </p>
-    <p class="msg">Thank for submitting the form.we are happy to see you joining us </p>
-    
-    <form action="index.php" method="post">
-    <input type="text" name="name"id="name" placeholder="Enter your name">
-     <input type="text" name="age"id="age" placeholder="Enter your agee">
-      <input type="text" name="gender"id="gender" placeholder="Enter your Gender">
-      <input type="email" name="email" id="email"placeholder="Enter your Email">
-       <input type="text" name="phone"id="Phone" placeholder="Enter your phone">
-       <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter Description"></textarea>
-       <button class="btn">Submit</button>
-       </form>
-       </div>
-<script src="index.js"></script>
+    <p>Enter your details and submit this form to confirm your participation in the trip</p>
+    <p class="msg">Thank you for submitting the form. We are happy to see you joining us.</p>
 
+    <form action="index.php" method="post" id="tripForm" onsubmit="return validateForm()">
+      <input type="text" name="name" id="name" placeholder="Enter your name">
+      <span class="error" id="nameError"></span>
 
+      <input type="text" name="age" id="age" placeholder="Enter your age">
+      <input type="text" name="gender" id="gender" placeholder="Enter your Gender">
+
+      <input type="email" name="email" id="email" placeholder="Enter your Email">
+      <span class="error" id="emailError"></span>
+
+      <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+      <span class="error" id="phoneError"></span>
+
+      <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter Description"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="reset" class="btn" style="margin-left: 10px;">Reset</button>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
-
